@@ -1,23 +1,30 @@
 import setuptools
 
-with open("README.md", "r") as fh:
+with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="xml2json",  # This is the name of the package
-    version="0.0.1",  # The initial release version
-    author="Dorin Musteata",  # Full name of the author
-    description="Convert any XML to JSON",
-    long_description=long_description,  # Long description read from the the readme file
+    name="xml2json",
+    version="0.0.2",
+    author="Dorin Musteata & Victor Elceaninov",
+    author_email="dorin.musteata@ebs-integrator.com, victor.elceaninov@ebs-integrator.com",
+    description="xml2json is a package that converts any xml to json (dict).",
+    long_description=long_description,
     long_description_content_type="text/markdown",
-    packages=setuptools.find_packages(),  # List of all python modules to be installed
+    url="https://git2.devebs.net/ebs-backend/python/packages/xml2json",
+    project_urls={
+        "Bug Tracker": "https://git2.devebs.net/ebs-backend/python/packages/model-observer/-/issues",
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
-    ],  # Information to filter the project on PyPi website
-    python_requires='>=3.8',  # Minimum version requirement of the package
-    py_modules=["xml2json"],  # Name of the python package
-    package_dir={'': 'xml2json/src'},  # Directory of the source code of the package
-    install_requires=[]  # Install other dependencies if any
+    ],
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src"),
+    python_requires=">=3.8",
 )

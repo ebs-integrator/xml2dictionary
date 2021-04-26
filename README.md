@@ -1,7 +1,6 @@
 # xml2json
 
-
-Convert any XML to JSON Object
+xml2json is a package that converts any xml to json (dict)
 
 ## Requirements
 
