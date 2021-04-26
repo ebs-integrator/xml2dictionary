@@ -78,7 +78,7 @@ def json_to_xml(sources):
     return parsing
 
 
-def xml2json(xml='', sign='@', shift='#text', scape='item'):
+def xml2dictionary(xml='', sign='@', shift='#text', scape='item'):
     """
     Parse xml to json
     :param xml: XML Source
